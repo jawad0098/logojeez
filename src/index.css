@@ -1,0 +1,43 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Global styles */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  @apply font-sans text-gray-800;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  @apply font-display;
+}
+
+/* Swiper pagination custom styles */
+:root {
+  --swiper-theme-color: #0ea5e9;
+  --swiper-pagination-bullet-size: 10px;
+  --swiper-pagination-bullet-inactive-color: #CBD5E1;
+}
+
+.swiper-pagination-bullet {
+  opacity: 0.7;
+}
+
+.swiper-pagination-bullet-active {
+  opacity: 1;
+}
+
+/* Form styles */
+input, select, textarea {
+  @apply transition-all duration-200;
+}
+
+/* Hover and focus animations */
+a, button {
+  @apply transition-all duration-200;
+}
