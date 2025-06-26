@@ -406,23 +406,23 @@ export default function Home() {
 
   return (
     <>
-      {/* Seasonal Offer Banner - center horizontally, width 60vw, rounded bottom corners */}
+      {/* Seasonal Offer Banner - responsive */}
       <div
-        className="absolute top-[118px] left-1/2 -translate-x-1/2 w-[63vw] flex flex-col items-center justify-center bg-gradient-to-r from-[#14b8a6] via-[#06b6d4] to-[#0ea5e9] text-white py-3 px-2 shadow-md z-40 rounded-b-2xl"
+        className="absolute top-[118px] left-1/2 -translate-x-1/2 w-full max-w-[95vw] sm:w-[63vw] flex flex-col items-center justify-center bg-gradient-to-r from-[#14b8a6] via-[#06b6d4] to-[#0ea5e9] text-white py-2 sm:py-3 px-2 sm:px-4 shadow-md z-40 rounded-b-2xl"
         style={{ minHeight: 40 }}
       >
-        <div className="flex flex-col sm:flex-row items-center justify-between w-full max-w-5xl mx-auto gap-2">
-          <div className="flex items-center gap-2">
-        <span className="font-bold text-lg sm:text-xl">🎉 Seasonal Offer: 25% OFF on All Branding Packages!</span>
-        <span className="hidden sm:inline text-sm font-medium opacity-80 ml-3">Limited time only. Don't miss out!</span>
+        <div className="flex flex-col sm:flex-row items-center justify-between w-full max-w-5xl mx-auto gap-2 sm:gap-4">
+          <div className="flex flex-col sm:flex-row items-center gap-1 sm:gap-2 w-full sm:w-auto text-center sm:text-left">
+            <span className="font-bold text-base sm:text-lg md:text-xl">🎉 Seasonal Offer: 25% OFF on All Branding Packages!</span>
+            <span className="hidden sm:inline text-sm font-medium opacity-80 ml-0 sm:ml-3">Limited time only. Don't miss out!</span>
           </div>
           <button
-        className="mt-2 sm:mt-0 bg-white text-[#14b8a6] font-bold px-4 py-2 rounded-lg shadow hover:bg-[#0f172a] hover:text-white transition-all text-base"
-        onClick={() => setOfferOpen(o => !o)}
-        aria-expanded={offerOpen}
-        aria-controls="seasonal-offer-accordion"
+            className="mt-2 sm:mt-0 bg-white text-[#14b8a6] font-bold px-4 py-2 rounded-lg shadow hover:bg-[#0f172a] hover:text-white transition-all text-base w-full sm:w-auto"
+            onClick={() => setOfferOpen(o => !o)}
+            aria-expanded={offerOpen}
+            aria-controls="seasonal-offer-accordion"
           >
-        {offerOpen ? 'Hide Offer' : 'Click Here'}
+            {offerOpen ? 'Hide Offer' : 'Click Here'}
           </button>
         </div>
       </div>
@@ -434,7 +434,6 @@ export default function Home() {
           style={{
             top: 88, // 56px banner + 32px (top-32)
             minHeight: 'calc(100vh - 88px)',
-            backdropFilter: 'blur(2px)',
           }}
         >
           <div className="relative w-full max-w-5xl mx-auto px-2 mt-24">
